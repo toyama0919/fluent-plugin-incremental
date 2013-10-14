@@ -10,6 +10,28 @@ number incremental output plugin for Fluentd.
 
 param    |   value
 --------|------
+unit|reset cycle unit(year or month or day or hour or min)
+incremental_file_path|incremental store file path
+remove_tag_prefix|remove tag prefix
+add_tag_prefix|add tag prefix
+name_key_pattern|incremental column target , regular expression
+
+## result example
+
+	{"status_200_count" => "10","status_404_count" => "10"} # tag -> test.debug 
+	#=> {"status_200_count" => "10","status_404_count" => "10"}
+	
+	{"status_200_count" => "15","status_404_count" => "20"} # tag -> test.debug
+	#=> {"status_200_count" => "25","status_404_count" => "30"}
+
+	{"status_200_count" => "15","status_404_count" => "20"} # tag -> test2.debug
+	#=> {"status_200_count" => "15","status_404_count" => "20"}
+
+	{"status_200_count" => "20","status_404_count" => "30"} # tag -> test.debug
+	#=> {"status_200_count" => "45","status_404_count" => "60"}
+
+	{"status_200_count" => "15","status_404_count" => "20"} # tag -> test2.debug
+	#=> {"status_200_count" => "30","status_404_count" => "40"}
 
 
 ## Configuration
