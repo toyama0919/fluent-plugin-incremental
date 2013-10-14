@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = "0.0.1"
   spec.authors       = ["toyama0919"]
   spec.email         = ["toyama0919@gmail.com"]
-  spec.description   = %q{number incremental output for Fluentd.}
+  spec.description   = %q{numeric incremental output plugin for Fluentd.}
   spec.summary       = spec.description
   spec.homepage      = "https://github.com/toyama0919/fluent-plugin-incremental/"
   spec.license       = "MIT"

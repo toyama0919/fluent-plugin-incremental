@@ -1,6 +1,6 @@
 # Fluent::Plugin::incremental
 
-number incremental output plugin for Fluentd.
+numeric incremental output plugin for Fluentd.
 
 ## Installation
 
