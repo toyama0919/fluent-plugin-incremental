@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-incremental"
   spec.version       = "0.0.1"
-  spec.authors       = ["toyama0919"]
+  spec.authors       = ["Hiroshi Toyama"]
   spec.email         = ["toyama0919@gmail.com"]
   spec.description   = %q{numeric incremental output plugin for Fluentd.}
   spec.summary       = spec.description
